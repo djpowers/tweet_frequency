@@ -4,6 +4,7 @@ feature "User views the index page" do
   scenario "user sees the correct title" do
     visit '/'
 
-    expect(page).to have_content "Hello World"
+    expect(page.title).to include "You Tweet Too Much"
+    expect(page).to have_content "You Tweet Too Much"
   end
 end

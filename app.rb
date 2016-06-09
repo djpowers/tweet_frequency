@@ -15,6 +15,6 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 get '/' do
-  @title = "Hello World"
+  @title = "You Tweet Too Much"
   erb :index
 end
