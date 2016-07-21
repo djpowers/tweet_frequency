@@ -3,8 +3,6 @@ require 'sinatra/reloader'
 require 'omniauth-twitter'
 require 'twitter'
 require 'chartkick'
-require 'dotenv'
-Dotenv.load
 
 enable :sessions
 use OmniAuth::Builder do
@@ -19,6 +17,8 @@ end
 
 configure :development, :test do
   require 'pry'
+  require 'dotenv'
+  Dotenv.load
 end
 
 configure do
