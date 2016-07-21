@@ -1,5 +1,4 @@
 .bundle
 .DS_store
 config/database.yml
-Gemfile.lock
 .env
