@@ -7,6 +7,7 @@ gem 'sinatra-contrib'
 gem 'omniauth-twitter'
 gem 'twitter'
 gem 'chartkick'
+gem 'puma'
 
 group :test, :development do
   gem 'database_cleaner'
