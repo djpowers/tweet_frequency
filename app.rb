@@ -31,8 +31,13 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 get '/' do
-  @title = "You Tweet Too Much"
-  erb :index
+  <<~HTML
+      <h1>You Tweet Too Much</h1>
+      <form method='post' action='/auth/twitter'>
+        <input type="hidden" name="authenticity_token" value='#{request.env["rack.session"]["csrf"]}'>
+        <button type='submit'>Sign in with Twitter</button>
+      </form>
+  HTML
 end
 
 get '/login' do
